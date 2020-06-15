@@ -1,6 +1,5 @@
-class ClickbaitValidator < ActiveModel::Validator 
+class ClickbaitValidator < ActiveModel::Validator
   def validate(record)
-     
-  end 
-end 
 
+  end
+end
