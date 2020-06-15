@@ -1,11 +1,11 @@
 class ClickbaitValidator < ActiveModel::Validator
   def validate(record)
-    if data.title.present?
-      if !data.title.include? "Won't Believe" || "Secret" || "Top [number]" || "Guess"
-        data.errors[:title] << "Invalid Title"
+    if record.title.present?
+      if !record.title.include? "Won't Believe" || "Secret" || "Top [number]" || "Guess"
+        record.errors[:title] << "Invalid Title"
       end
     else
-       data.errors[:title] << "Title can't be blank"
+       record.errors[:title] << "Title can't be blank"
    end
   end
 end
